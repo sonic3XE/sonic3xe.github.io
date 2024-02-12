@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-scroll">
 	<head>
 		<meta charset="utf-8">
 		<title>Error 404: Not Found</title>
@@ -9,7 +9,16 @@
 		<meta content="on">
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
-		What are you doing?
+	<body class="no-scroll">
+		<script id="temporaryScript">var videoEl=document.createElement("video");
+		videoEl.src="https://cdn.glitch.global/4777c7d0-2cac-439c-bde4-07470718a4d7/No%20Such%20File%20Exists.mp4";
+		videoEl.setAttribute("oncontextmenu","return false");
+		videoEl.setAttribute("disablepictureinpicture","");
+		videoEl.setAttribute("oncanplaythrough","this.muted=true;this.play();");
+		document.body.appendChild(videoEl);
+		requestAnimationFrame(function run(){
+			videoEl.setAttribute("style",`cursor: none; transform: scaleX(${window.innerWidth/1920}) scaleY(${window.innerHeight/1080});transform-origin: top left;`);
+		});
+		temporaryScript.remove();</script>
 	</body>
 </html>
