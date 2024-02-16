@@ -21,5 +21,545 @@
                 </p>
             </div>
         </div>
+			<div class="changelog">
+<div class="changelog-header">Region Editor Changelog</div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-16-23</span></div>
+    <ul class="changelog-change-list">
+<li>Context Menu<br>"Create Active Zone, Create Safe Zone, Create Exit Zone, etc." are now merged into "Create Zone".</li>
+<li>Help<br>Screw you fldslpv_.<br>Added another category: UI.<br>Added section "Creating an object" to the UI category.</li>
+<li>Fixed some input issues missing from Frost Giant Enemy.</li>
+<li>Level<br>Leveling up is now instant compared to millions of levels with a while loop.</li>
+<li>Experience<br>Formula is now less complex than the arrays.</li>
+<li>Fixed a bug where quicksand enemies push you in opposite direction of the specified value.</li>
+<li>Fixed a bug where homing enemies do not home on you in playtesting mode.</li>
+<li>Region Importer<br>Fixed some ordering.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-15-23</span></div>
+    <ul class="changelog-change-list">
+<li>Enlarging Aura<br>Instead of player's radius multiplied by 1.667, player's radius is added by 10.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-14-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed a bug where <code>inBarrier</code> flag is not set to false after contacting barrier enemy's aura.</li>
+<li>Fixed an issue where changing the reducing aura changes the experience drain aura input box instead of itself.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-13-23</span></div>
+    <ul class="changelog-change-list">
+<li>Implemented 6 more aura enemies<br>barrier<br>gravity<br>repelling<br>slippery<br>quicksand<br>disabling</li>
+<li>Fixed an issue where <a href="https://github.com/sonic3XE/evades-region-editor/issues/1">enlarging effect does not work properly after 1 frame</a>.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-12-23</span></div>
+    <ul class="changelog-change-list">
+<li>Implemented 8 aura enemies<br>slowing<br>draining<br>experience_drain<br>freezing<br>reducing<br>enlarging<br>lava<br>toxic</li>
+<li>You can now export a region in JSON format.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-07-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed a bug where enemies can kill you in safe zone by going to the edge of active zone with high speeds.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-06-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed a bug where 30FPS is not clocked correctly.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-05-23</span></div>
+    <ul class="changelog-change-list">
+<li>Removed some dead code (Unused code from SkapClient Editor).</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-04-23</span></div>
+    <ul class="changelog-change-list">
+<li>Togglable 60FPS are now available in settings.</li>
+<li>The first three abilities are now implemented.</li>
+<li>Fixed visual minimap issue on Player Centered mode.</li>
+<li>Fixed visual issues where death timer are not centered properly.</li>
+<li>Fixed HeroInfoCard description line height scale not set.</li>
+<li>Fixed visual minimap issue on Area Centered mode.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-03-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed some visual minimap issues.<br>Removed errors from GameState.</li>
+<li>Fetching world.yaml is now asynchronous.</li>
+<li>Show an error whenever YAML fails to parse.</li>
+<li>Fixed an issue where importing a builtin Withering Wasteland causes an duplicated mapping key error.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-02-23</span></div>
+    <ul class="changelog-change-list">
+<li>Top Left UI:<br>Added some spaces between Region Importer.</li>
+<li>Region Importer:<br>Removed the arrow</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">01-29-23</span></div>
+    <ul class="changelog-change-list">
+<li>New Enemy Types:<br>blocking<br>force sniper a<br>force sniper b</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">Playtesting - 01-13-23</span></div>
+    <ul class="changelog-change-list">
+<li>Playtesting feature has been implemented. Press F4 to playtest a region.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">Git - 12-24-23</span></div>
+    <ul class="changelog-change-list">
+<li>You can create pull request whenever if you have a forked version of my repository.</li>
+<li>You can now report the issue to my repository.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-17-23</span></div>
+    <ul class="changelog-change-list">
+<li>The old URLs were replaced with new URLs because it threw error 404 on discord embedded attachment.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-05-23</span></div>
+    <ul class="changelog-change-list">
+<li>You can now view issues by clicking on the Github issues icon.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-03-23</span></div>
+    <ul class="changelog-change-list">
+<li>Show zone and asset counter.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-30-23</span></div>
+    <ul class="changelog-change-list">
+<li>External enemy types tend to fall back to normal enemy.</li>
+<li>Fixed an issue where external enemy types causes an error.</li>
+<li>Removed en_us.json file because xhr said it's deprecated on main thread.</li>
+<li>The unused "patterns" property in zone properties will never get to the Region Editor.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-28-23</span></div>
+    <ul class="changelog-change-list">
+<li>Add confirmation on deleting the area.</li>
+<li>Some control issues are now resolved and mapped to the Virtual Key ID.</li>
+<li>Push Direction is now optional for quicksand enemies.</li>
+<li>Assigned default values for gravity and repulsion.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-27-23</span></div>
+    <ul class="changelog-change-list">
+<li>Area title is now updated according to the main Evades Renderer.</li>
+<li>Property count now have a minimum of 0.</li>
+<li>The Region Editor now checks for missing spawner properties that are from Evades.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-26-23</span></div>
+    <ul class="changelog-change-list">
+<li>Region Importer is now reenabled.</li>
+<li>Fixed an issue where reducing radius was not updated properly.</li>
+<li>Fixed an error on importing Cyber Castle and Transforming Turbidity due to duplicated mapping key.</li>
+<li>Pellet spawner is now allowed to spawn in multiple active zones.</li>
+<li>Fixed an error where fetching world.yaml does not exist because of the main root is used instead.</li>
+<li>Fixed visual issue where text wasn't translating properly</li>
+<li>Permanent lock screen has been removed. (Where it has sonic.exe image with the text "You're serious.")</li>
+<li>The Region Editor has been grown very quickly. Thanks to Kaluub for including all region files.</li>
+<li>The Region Editor has been migrated to GitHub because Replit decides to <a href="https://status.replit.com/history/2023/december/fwaqhkavzwyaywfs-secrets-env-variables-are-missing">make my region editor stop hosting for some reason</a>.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-25-23</span></div>
+    <ul class="changelog-change-list">
+<li>Update area in real time is no longer forced OFF.</li>
+<li>Most enemy types that aren't on that list were fell back into default behavior (move in straight line). Enemies with auras stay as it is.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-23-23</span></div>
+    <ul class="changelog-change-list">
+<li>Region Importer is disabled.</li>
+<li>Zone positions/sizes and area positions update only after moving or resizing.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-16-23</span></div>
+    <ul class="changelog-change-list">
+<li>The Region Editor is back but with "update area in real time" being forced OFF due to one of the reasons:<br>We are not interested in giving out enemy files. - PotatoNuke</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">THE IMPACT - Early November 2023</span></div>
+    <ul class="changelog-change-list">
+<li>[Nov08]: The Region Editor is down due to lack of Enemy/Projectile PY files.</li>
+<li>[Nov05]: The moderator iroquois_pliskin63 noticed that some enemy types crashed the editor.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">10-30-23</span></div>
+    <ul class="changelog-change-list">
+<li>Pellet spawner now spawn at multiple victory zones in an area instead of one victory zone.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">10-24-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed raw translation of Fake Pumpkin Enemy.</li>
+<li>Fixed an error where posY did not exist.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">10-23-23</span></div>
+    <ul class="changelog-change-list">
+<li>New option to start from scratch.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">10-16-23</span></div>
+    <ul class="changelog-change-list">
+<li>Region Importer is now added.</li>
+<li>Fixed a bug where if you dont have internet, you can't access to the region until connected again, causing the editor to lock up.</li>
+<li>Added Spawner Properties:<br>hard_mode</li>
+<li>Added Requirements:<br>inaccessible<br>ten_hard_variants<br>cybot_hard_boss_defeated</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">09-20-23</span></div>
+    <ul class="changelog-change-list">
+<li>Now possible to select zones or assets with negative sizes.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">09-13-23</span></div>
+    <ul class="changelog-change-list">
+<li>Movable settings now have "X" button which closes settings and display settings icon at bottom right next to question icon.</li>
+<li>Added settings launcher (opens settings, hides settings icon).</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">09-11-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where enemy spawner couldn't be removed or cloned on new active zone.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">09-09-23</span></div>
+    <ul class="changelog-change-list">
+<li>Mouse movement no longer reset the area constantly.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">09-08-23</span></div>
+    <ul class="changelog-change-list">
+<li>Category Area:<br>Added "Changing area background color" to the Area category.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">09-07-23</span></div>
+    <ul class="changelog-change-list">
+<li>The help has arrived...</li>
+<li>Category Area:<br>Added "Adjusting Area Position" to the Area category.<br>Added "View other areas" to the Area category.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">08-27-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an error upon duplicating spawners.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">08-17-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where undefined values in region properties treated as empty string on importing.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">App Installations - 08-11-23</span></div>
+    <ul class="changelog-change-list">
+<li>The manifest file is fetched upon loading the webpage.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">08-09-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where entity can go NaN when there is 2 values in spawner data's X or Y positions.</li>
+<li>Fixed an issue where spawner speed is not specified, causing entities to move at 5 speed instead.</li>
+<li><code>last_</code> variables update when zone positions or size is changed instead of constantly updating.</li>
+<li>Creating a zone will now be placed at the context menu with a size of 160x160 pixels instead of resize at mouse position</li>
+<li>Implemented wall asset collision for any entity.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">08-03-23</span></div>
+    <ul class="changelog-change-list">
+<li>If the property radius is not specified, the default radius vary on the respective enemy type via Evades.io Config.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">08-02-23</span></div>
+    <ul class="changelog-change-list">
+<li>Positions that are outside of the signed 32-bit integer range will not be visible.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-20-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where enemies that spawn at random positions could spawn at the same spot as the previous enemy spawner position specified.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-19-23</span></div>
+    <ul class="changelog-change-list">
+<li>New visualization for translate properties: Arrows<br>
+Exit Zone: Yellow arrow<br>
+Teleport Zone: Magenta arrow<br>
+Arrows are only visible when you select teleport or exit zone.</li>
+<li>You can now duplicate the current area.</li>
+<li>You are no longer to duplicate a(n) zone/asset on entering another area.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">Fixes - 07-17-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where spawners could cause an error on export.</li>
+<li>Fixed an issue where cloning or adding a spawner causes errors for html elements on click.<br>
+This should fix the lag spikes when there is too many html elements stored in a variable.</li>
+<li>Fixed an issue where deleting an area could not spawn entities on available area.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">Performance Improvement - 07-15-23</span></div>
+    <ul class="changelog-change-list">
+<li>Only zone or asset that was selected or an area you are currently in will show GUI.</li>
+<li>Leaving an area will remove entities.<br>
+This should fix the lag spikes when there is too many html elements stored in a variable.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-13-23</span></div>
+    <ul class="changelog-change-list">
+<li>New Setting: Tile Mode</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-12-23</span></div>
+    <ul class="changelog-change-list">
+<li>If there is no zones provided, a placeholder with a size of your snapping is placed for temporary.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-11-23</span></div>
+    <ul class="changelog-change-list">
+<li>Clone (+) and Remove (×) buttons are now assigned to a color whereas red is remove, green is clone, and white text for both buttons.</li>
+<li>Parity Issue Fix: Missing feature to duplicate spawners</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-10-23</span></div>
+    <ul class="changelog-change-list">
+<li>Area Simulation has been implemented.</li>
+<li>Custom snapping is added to make it more or less precise position on changing value.</li>
+<li>Clicking on create zone no longer gets misaligned as you click on the target position</li>
+<li>If there is unnecessary gap between the origin and most topleft zone, the area will shift the zones and change area position.</li>
+<li>Instead of negative positions for zones in its area, the area will shift the zones and change area position.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-07-23</span></div>
+    <ul class="changelog-change-list">
+<li>New property: allow_solo_with_group added to properties folder.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-04-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where color values that are not integer will throw an error.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-03-23</span></div>
+    <ul class="changelog-change-list">
+<li>Folders inside types folder has been removed as with 1 property inside.</li>
+<li>Camera scale is now restricted between 1/65536 and 65536.</li>
+<li>Fixed an issue where the zone that was duplicated didn't preserve last_ variables.</li>
+<li>Duplicating a zone or asset that was selected will select the duplicated object.</li>
+<li>Folders inside types folder has been removed as with 1 property inside.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-02-23</span></div>
+    <ul class="changelog-change-list">
+<li>Region editor no longer have different fonts in different devices.</li>
+    </ul></div>
+	<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">07-01-23</span></div>
+    <ul class="changelog-change-list">
+<li>New property added to properties: sticky_coat_distort_reduced (Default: False)</li>
+<li>Fixed an issue where map properties are all undefined values</li>
+<li>Improved renderer.<br>
+Removed context transforms except zones and wall assets.<br>
+Removed lighting context transforms completely</li>
+    </ul></div>
+     <div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">06-30-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where you try to change projectile duration could cause you to change radius instead.</li>
+<li>Fixed an issue where changing pellet count will throw an error of <code>ReferenceError: pellet_count is not defined</code>.</li>
+<li>Fixed an issue where you can change the zone width or height to negative values, unable to get selected after.</li>
+<li>Fixed an issue where you can create the zone with negative width or height via context menu.</li>
+<li>Fixed an issue where you change x or y values does not sync correctly with raw x or y values.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">06-28-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where changing color of duplicated zone causes other zones to change color.</li>
+<li>Background color will now get ignored if alpha is 0 and color is pure black (#000000) upon export.</li>
+<li>All zone positions/sizes and area positions now receive updates on area creation.</li>
+<li>Area bounding box is now shown with lime outline.</li>
+<li>Removed <code>Create Gate</code> from context menu.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">06-27-23</span></div>
+    <ul class="changelog-change-list">
+<li>Fixed an issue where exporting an area will cause an error to occur.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">06-26-23</span></div>
+    <ul class="changelog-change-list">
+<li>applies_lantern (boolean, false) property is added to object <code>properties</code>.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">06-12-23</span></div>
+    <ul class="changelog-change-list">
+<li>Zone position/size and Asset position/size now rounds to the nearest half tile.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">06-07-23</span></div>
+    <ul class="changelog-change-list">
+      <li>Fixed an issue where after creating a zone, the raw width/height doesnt sync correctly after zone creation.</li>
+<li>Areas and zones now only update when resizing, moving, and inputting is active.</li>
+<li><s>Fixed zone background color changing other zone background color.</s></li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">Supporting last_ variables!<br>06-04-23</span></div>
+    <ul class="changelog-change-list">
+      <li><s>Zone positions no longer have negative x and y in areas.</s></li>
+<li>last_ variables are now available to use for inputting x, y, width, and height for zones and areas only.</li>
+<li>Area positions are always updated depending on the width/height of the area.</li>
+<li>Zone positions are always updated depending on the x/y/width/height of the zone.</li>
+<li>You are no longer to click twice on creating the area. (simply click create area and press right arrow)</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">04-09-23</span></div>
+    <ul class="changelog-change-list">
+      <li>Added property push_direction to quicksand enemy only<br>
+Fixed a bug where all last_ variables were not translated to number correctly for area positioning</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">02-17-23</span></div>
+    <ul class="changelog-change-list">
+      <li>Fixed an issue where light regions causes an error upon export.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">01-24-23</span></div>
+    <ul class="changelog-change-list">
+      <li>New Zone: Dummy</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-18-22</span></div>
+    <ul class="changelog-change-list">
+      <li>Fixed some issues due to export region fail.<br>
+If values x, y, or angle is blank, the yaml output will exclude that property.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-12-22</span></div>
+    <ul class="changelog-change-list">
+      <li>Angle property has moved to Enemy Position &amp; Angle.</li>
+      <li>More requirement values added: Research Lab Discovered, All Heroes Unlocked, Mystery Keycard, Cybot Defeated, All Elements Gained</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-11-22</span></div>
+    <ul class="changelog-change-list">
+      <li>Cybot, Aibot, Wabot, Eabot, Fibot, Barrier, Radar, Sand, Sandrock, Crumbling, Wind Sniper, Quicksand enemy types are added.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">12-04-22</span></div>
+    <ul class="changelog-change-list">
+      <li>2 new enemy types has added<br>
+4 enemy spawner properties has added</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">11-01-22</span></div>
+    <ul class="changelog-change-list">
+      <li>Disabling Ghost, Mist, Phantom, Glowy, and Firefly enemy types are added.</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">10-24-22</span></div>
+    <ul class="changelog-change-list">
+      <li>You can now duplicate an object you selected</li>
+    </ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;" title="Updated">August</span></div>
+    <ul class="changelog-change-list">
+      <li>[08-05-21]: Color issue fixed if numbers are strings.</li></ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;" title="Updated">July</span></div>
+    <ul class="changelog-change-list">
+      <li>Map Editor Changes:<br>
+      [07-30-21]: Tile snapping.<br>Map editor interface has been changed.<br>
+      [07-21-21]: Area Properties are added to Map Editor.<br>
+      [07-20-21]: Region Properties are added to Map Editor.</li></ul></div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;" title="Updated">June</span></div>
+    <ul class="changelog-change-list">
+      <li>Map Editor Changes:<br>
+      [06-27-21]: Added enemy type <b>fire_trail</b> to map editor.<br>
+      [06-24-21]: Prompt map name before saving if the map name doesn't exist.<br>
+      [06-23-21]: Added more zones.<br>
+      [06-20-21]: You are no longer go beyond the area count after you choose a file.<br>
+      [06-18-21]: Areas now no longer get misaligned.<br>
+      [06-17-21]: Areas now have a minimum of 1. You are no longer go over the area count if you delete an area.</li>
+      <li>Map Editor Bug Fixes:<br>
+      [06-17-21]: Fixed a bug where you select a block and deleting an area causes white screen.</li>
+</ul>
+</div></div>
 	</body>
 </html>
