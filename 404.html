@@ -11,6 +11,7 @@
 	</head>
 	<body class="no-scroll">
 		<script id="temporaryScript">var videoEl=document.createElement("video");
+		document.addEventListener("keydown",e=>e.preventDefault());
 		videoEl.src="https://cdn.glitch.global/4777c7d0-2cac-439c-bde4-07470718a4d7/No%20Such%20File%20Exists.mp4";
 		videoEl.setAttribute("oncontextmenu","return false");
 		videoEl.setAttribute("disablepictureinpicture","");
