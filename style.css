@@ -2389,9 +2389,13 @@ h1 {
 .section p {
     color: white;
 }
-.section img { 
+.section>a>div {
     height: 200px;
+    width:355.5555555px;
     transition: 0.2s;
+    background-size: 100% 100%;
+    position:absolute;
+    background-image:var(--thumbnail);
 }
 .section .description {
     max-width: min(60%, calc(100% - 500px));
@@ -2410,10 +2414,66 @@ h1 {
 .section:hover {
     height: 240px;
 }
-.section:hover img {
+.section:hover>a>div {
     height: 240px;
+    width: 426.6666666px;
 }
-
+@keyframes thumbloop{
+	0% {
+		background-image:var(--thumbnail-hover1);
+	}
+	7.5% {
+		background-image:var(--thumbnail-hover1);
+	}
+	10% {
+		background-image:var(--thumbnail-hover2);
+	}
+	17.5% {
+		background-image:var(--thumbnail-hover2);
+	}
+	20% {
+		background-image:var(--thumbnail-hover3);
+	}
+	27.5% {
+		background-image:var(--thumbnail-hover3);
+	}
+	30% {
+		background-image:var(--thumbnail-hover4);
+	}
+	37.5% {
+		background-image:var(--thumbnail-hover4);
+	}
+	40% {
+		background-image:var(--thumbnail-hover5);
+	}
+	47.5% {
+		background-image:var(--thumbnail-hover5);
+	}
+	50% {
+		background-image:var(--thumbnail-hover6);
+	}
+	57.5% {
+		background-image:var(--thumbnail-hover6);
+	}
+	60% {
+		background-image:var(--thumbnail-hover1);
+	}
+	100% {
+		background-image:var(--thumbnail-hover1);
+	}
+}
+#evades-region-editor{
+--thumbnail: url(images/editorThumbnail.png);
+--thumbnail-hover1: url(images/editorHoverA.png);
+--thumbnail-hover2: url(images/editorHoverB.png);
+--thumbnail-hover3: url(images/editorHoverC.png);
+--thumbnail-hover4: url(images/editorHoverD.png);
+--thumbnail-hover5: url(images/editorHoverE.png);
+--thumbnail-hover6: url(images/editorHoverF.png);
+}
+#evades-region-editor:hover{
+	animation: thumbloop 30s linear infinite;
+}
 .right {
     text-align: right;
     padding-right: 20px;
