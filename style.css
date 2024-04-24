@@ -2462,6 +2462,9 @@ h1 {
 		background-image:var(--thumbnail-hover1);
 	}
 }
+#evades-ultimate-omniverse{
+  background-image: url(https://cdn.glitch.global/479942fa-6265-4960-8ce1-d5a6f9144090/4eab16ad-7971-46f5-9efa-6f3a08a8e727.image.png)
+}
 #evades-region-editor{
 --thumbnail: url(images/editorThumbnail.png);
 --thumbnail-hover1: url(images/editorHoverA.png);
