@@ -21,7 +21,7 @@
                 </p>
             </div>
         </div>
-		<div class="section left">
+		<div class="section left" style="filter:url(#chromatic);">
             <a href="https://sonicexe-old-sandbox.glitch.me" target="_blank"><div id="evades-ultimate-omniverse"></div></a>
             <div class="description">
                 <h2><a href="https://sonicexe-old-sandbox.glitch.me"><img src="evades-region-editor/evades.svg"> evades-ultimate-omniverse</a></h2>
@@ -31,13 +31,33 @@
 for(var i=0;i<100;i++){
     str+=String.fromCharCode(Math.random()*256)
 }
+var now=Date.now();
+re.dx.baseVal=Math.cos(now/1e2)*5;
+ge.dx.baseVal=-Math.cos(now/1e2)*5;
+be.dx.baseVal=-Math.cos(now/1e2)*5;
 					garbage.textContent=str;
 					requestAnimationFrame(run);
 					})</script>
                 </p>
             </div>
         </div>
-		
+		<span hidden>
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<defs>
+					<filter id="chromatic">
+						<feColorMatrix in="SourceGraphic" values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 " result="colormatrix1"></feColorMatrix>
+						<feOffset dy="0" dx="-1" result="offset1" id="re"></feOffset>
+						<feBlend in2="flood" mode="lighten" result="blend1"></feBlend>
+						<feColorMatrix in="SourceGraphic" values="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 " result="colormatrix2"></feColorMatrix>
+						<feOffset dy="0" dx="1" result="offset2" id="ge"></feOffset>
+						<feBlend in2="blend1" mode="lighten" result="blend2"></feBlend>
+						<feColorMatrix in="SourceGraphic" values="0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 " result="colormatrix3"></feColorMatrix>
+						<feOffset dy="0" dx="1" result="offset3" id="be"></feOffset>
+						<feBlend in2="blend2" mode="lighten" result="blend3"></feBlend>
+					</filter>
+				</defs>
+			</svg>
+		</span>
 
 			<div class="changelog">
 <div class="changelog-header">Region Editor Changelog</div>
