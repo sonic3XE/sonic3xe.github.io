@@ -811,7 +811,10 @@ re.dy.baseVal=Math.random()*10-5;
 ge.dx.baseVal=Math.random()*10-5-Math.tan(now);
 ge.dy.baseVal=Math.random()*10-5;
 be.dx.baseVal=Math.random()*10-5-Math.tan(now);
-be.dy.baseVal=Math.random()*10-5;
+be.dy.baseVal=Math.random()*10-5;/*
+re.dx.baseVal=5*Math.sin(30*now/(1e3/30) * Math.PI/180);
+ge.dx.baseVal=-5*Math.sin(30*now/(1e3/30) * Math.PI/180);
+be.dx.baseVal=-5*Math.sin(30*now/(1e3/30) * Math.PI/180);*/
 					garbage.textContent=str;
 					requestAnimationFrame(run);
 					});var ismaximize=false;var icons=[
@@ -825,6 +828,12 @@ be.dy.baseVal=Math.random()*10-5;
 			<div class="changelog">
 <div class="maximize-sticky-wrapper"><div class="maximize-container"><button class="maximize-button" onclick="document.querySelector('.maximize-button').innerHTML=icons[Number(ismaximize)];ismaximize=!ismaximize;ismaximize ? document.querySelector('.changelog').classList.add('maximized') : document.querySelector('.changelog').classList.remove('maximized')"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="expand" class="svg-inline--fa fa-expand " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"></path></svg></button></div></div>
 <div class="changelog-header">Region Editor Changelog</div>
+<div class="changelog-section">
+  <div class="changelog-section-header">
+    <span style="vertical-align: middle;">05-18-24</span></div>
+    <ul class="changelog-change-list">
+<li>Implement Frost Giant enemy.</li>
+    </ul></div>
 <div class="changelog-section">
   <div class="changelog-section-header">
     <span style="vertical-align: middle;">05-16-24</span></div>
