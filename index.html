@@ -806,9 +806,12 @@ for(var i=0;i<100;i++){
     str+=String.fromCharCode(Math.random()*256)
 }
 var now=arguments[0];
-re.dx.baseVal=5*Math.sin(30*now/(1e3/30) * Math.PI/180);
-ge.dx.baseVal=-5*Math.sin(30*now/(1e3/30) * Math.PI/180);
-be.dx.baseVal=-5*Math.sin(30*now/(1e3/30) * Math.PI/180);
+re.dx.baseVal=Math.random()*10-5+Math.tan(now);
+re.dy.baseVal=Math.random()*10-5;
+ge.dx.baseVal=Math.random()*10-5-Math.tan(now);
+ge.dy.baseVal=Math.random()*10-5;
+be.dx.baseVal=Math.random()*10-5-Math.tan(now);
+be.dy.baseVal=Math.random()*10-5;
 					garbage.textContent=str;
 					requestAnimationFrame(run);
 					});var ismaximize=false;var icons=[
@@ -826,7 +829,7 @@ be.dx.baseVal=-5*Math.sin(30*now/(1e3/30) * Math.PI/180);
   <div class="changelog-section-header">
     <span style="vertical-align: middle;">05-16-24</span></div>
     <ul class="changelog-change-list">
-<li>Added more settings for mouse movement.</li>
+<li>Added more settings for mouse movement, joystick, and display timer.</li>
     </ul></div>
 <div class="changelog-section">
   <div class="changelog-section-header">
