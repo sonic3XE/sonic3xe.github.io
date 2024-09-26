@@ -840,6 +840,8 @@ be.dx.baseVal=-5*Math.sin(30*now/(1e3/30) * Math.PI/180);*/
   <div class="changelog-section-header">
     <span style="vertical-align: middle;">09-26-24</span></div>
     <ul class="changelog-change-list">
+<li>Fixed a bug where the player radius when not interacting reducing aura still increases, causing some player sizes to inflate.</li>
+<li>Minimum speed on players are no longer capped below 0.</li>
 <li>Fixed a bug where using 3rd ability caused a crash when the ability is non-existent.</li>
 <li>Common gamepad/controller is now supported in playtesting mode only.</li>
 <li>Fixed a bug where keys property in gameState object doesn't exist.</li>
