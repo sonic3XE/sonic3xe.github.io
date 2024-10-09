@@ -34,6 +34,11 @@ h1 {
     display: inline;
     transform: translateY(3px);
 }
+.section .description a svg {
+    height: 1em;
+    display: inline;
+    transform: translateY(3px);
+}
 .section:hover {
     height: 240px;
 }
@@ -86,7 +91,7 @@ h1 {
 	}
 }
 #evades-ultimate-omniverse{
-  background-image: url(https://cdn.glitch.global/479942fa-6265-4960-8ce1-d5a6f9144090/4eab16ad-7971-46f5-9efa-6f3a08a8e727.image.png)
+  background-image: url(https://cdn.glitch.global/479942fa-6265-4960-8ce1-d5a6f9144090/4eab16ad-7971-46f5-9efa-6f3a08a8e727.image.png);
 }
 #evades-region-editor{
 --thumbnail: url(images/editorThumbnail.png);
@@ -107,6 +112,10 @@ h1 {
 }
 .right>a>div {
     float: left;
+}
+.consumed{
+  --thumbnail: url(https://cdn.glitch.global/281d671e-cbc2-4d11-9bc6-413f999279a5/latest.png);
+  background-color: black;
 }
 .right .description {
     float: right;
