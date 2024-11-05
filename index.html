@@ -770,7 +770,6 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 		<meta content="on">
 		<link rel="stylesheet" href="./style.css">
 		<script src="script.js"></script>
-		<script>document.addEventListener("DOMContentLoaded",TimeIs_SyncClock);</script>
 		<span hidden>
 			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 				<defs>
@@ -2156,5 +2155,6 @@ ${sync_accuracy!=null?`<br><small>${sync_accuracy>4000?"The synchronization was 
 			garbage.textContent=str;
 			requestAnimationFrame(run);
 		});
+		TimeIs_SyncClock();
 	</script>
 </html>
