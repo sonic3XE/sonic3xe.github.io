@@ -2125,7 +2125,7 @@ If values x, y, or angle is blank, the yaml output will exclude that property.</
 		let prevT,T=Date.now();
 		requestAnimationFrame(function run(){
 			prevT=T;T=Date.now();
-			if(T>nextSyncT.getTime()||T<prevT)TimeIs_SyncClock();
+			if((nextSyncT!=0&&T>nextSyncT.getTime())||T<prevT){nextSyncT=new Date(0),TimeIs_SyncClock()};
 			TimeDisplay.innerHTML=`${"number"!=typeof timeDelay?timeDelay:Math.abs(timeDelay)<200?`${sync_accuracy>4000?"The synchronization was unsuccessful.<br><small>High accuracy could not be achieved because of the following reasons:<br>1. Your connection or computer is slow or busy.<br>2. The server was waking up.</small>":`Your time is exact!<br><small>The difference from the server was ${(timeDelay/1e3).toFixed(3)} seconds (±${sync_accuracy/2e3} seconds).</small>`}`:`${sync_accuracy>4000?"The synchronization was unsuccessful.<br><small>High accuracy could not be achieved because of the following reasons:<br>1. Your connection or computer is slow or busy.<br>2. The server was waking up.</small>":`${(timeDelay<0?"Your clock is $ behind.":"Your clock is $ ahead.").replace("$",Math.abs(timeDelay/1e3).toFixed(1)+" seconds")}<br><small>Accuracy of synchronization was ±${Math.abs(sync_accuracy/2e3).toFixed(3)} seconds.</small>`}`}<br><b>${timeformat("c")}</b>`;
 			str="";
 			//Disable links to region editor.
