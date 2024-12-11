@@ -4,17 +4,41 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 	const reader = {
 		pos: 0,
 		buffer: new DataView(buffer),
-		readInt32BE() {
-			return this.readUint16BE() << 16 | this.readUint16BE();
+		readFloat64(LE) {
+			return this.buffer.getFloat64(this.pos,LE,this.pos+=8);
 		},
-		readUint16BE() {
-			return this.readByte() << 8 | this.readByte();
+		readUint64(LE) {
+			return this.buffer.getBigUint64(this.pos,LE,this.pos+=8);
 		},
-		readByte() {
+		readInt64(LE) {
+			return this.buffer.getBigInt64(this.pos,LE,this.pos+=8);
+		},
+		readFloat32(LE) {
+			return this.buffer.getFloat32(this.pos,LE,this.pos+=4);
+		},
+		readUint32(LE) {
+			return this.buffer.getUint32(this.pos,LE,this.pos+=4);
+		},
+		readInt32(LE) {
+			return this.buffer.getInt32(this.pos,LE,this.pos+=4);
+		},
+		readUint16(LE) {
+			return this.buffer.getUint16(this.pos,LE,this.pos+=2);
+		},
+		readInt16(LE) {
+			return this.buffer.getInt32(this.pos,LE,this.pos+=2);
+		},
+		readBoolean() {
+			return !!this.readUint8();
+		},
+		readUint8() {
 			return this.buffer.getUint8(this.pos++);
 		},
+		readInt8() {
+			return this.buffer.getInt8(this.pos++);
+		},
 		readChar() {
-			return String.fromCharCode(this.readByte());
+			return String.fromCharCode(this.readUint8());
 		},
 		readString() {
 			let str = "", char = "";
@@ -26,17 +50,17 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 		},
 	},	readZone = function() {
 			return {
-				type: reader.readByte(),
-				x: reader.readInt32BE(),
-				y: reader.readInt32BE(),
-				width: reader.readInt32BE(),
-				height: reader.readInt32BE()
+				type: reader.readUint8(),
+				x: reader.readInt32(),
+				y: reader.readInt32(),
+				width: reader.readInt32(),
+				height: reader.readInt32()
 			};
 	},	readArea = function() {
 		const area = {
-			x: reader.readInt32BE(),
-			y: reader.readInt32BE(),
-			zone_count: reader.readUint16BE(),
+			x: reader.readInt32(),
+			y: reader.readInt32(),
+			zone_count: reader.readUint16(),
 			zones: []
 		};
 		while(area.zones.length<area.zone_count)area.zones.push(readZone());
@@ -44,7 +68,7 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 	},	readRegion = function() {
 		const region = {
 			region_name: reader.readString(),
-			area_count: reader.readUint16BE(),
+			area_count: reader.readUint16(),
 			areas: []
 		};
 		while(region.areas.length<region.area_count)region.areas.push(readArea());
@@ -52,7 +76,7 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 	},	readMap = function() {
 		const map = {
 			spawn_region: reader.readString(),
-			region_count: reader.readUint16BE(),
+			region_count: reader.readUint16(),
 			regions: []
 		};
 		while(map.regions.length<map.region_count)map.regions.push(readRegion());
