@@ -770,6 +770,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 		<meta content="on">
 		<link rel="stylesheet" href="./style.css">
 		<script src="script.js"></script>
+		<script src="evades-map-binary-deserialization.js"></script>
 		<span hidden>
 			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 				<defs>
@@ -812,6 +813,7 @@ Accessible to β-testers only.">EU 9</a><!--Mod Note: The link 192.99.150.59:900
                 </p>
             </div>
         </div>
+<div style="position:absolute;left:1vw;bottom:1vh;font-size:2.5vh;text-align:center;color:white;" id="FileReaderCheck">File <input id="load" accept=".bin" type="file"></div>
 <div style="position:absolute;right:1vw;bottom:1vh;font-size:2.5vh;animation:fadeIn 2s ease;text-align:center;color:white;" id="timeis-clock">Not fetched yet.</div>
 			<div class="changelog">
 <div class="maximize-sticky-wrapper"><div class="maximize-container"><button class="maximize-button" onclick="document.querySelector('.maximize-button').innerHTML=icons[Number(ismaximize)];ismaximize=!ismaximize;ismaximize ? document.querySelector('.changelog').classList.add('maximized') : document.querySelector('.changelog').classList.remove('maximized')"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="expand" class="svg-inline--fa fa-expand " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"></path></svg></button></div></div>
@@ -2001,7 +2003,7 @@ Removed lighting context transforms completely</li>
   <div class="changelog-section-header">
     <span style="vertical-align: middle;">06-12-23</span></div>
     <ul class="changelog-change-list">
-	<script>fetch("https://cdn.glitch.global/281d671e-cbc2-4d11-9bc6-413f999279a5/latest.png").then(e=>{e.arrayBuffer().then(v=>{var s1=new Uint8Array(v);var s2=[...s1];var url="data:application/octet-stream;base64,"+btoa(s2.map(e=>String.fromCodePoint(e)).join(""));var t=document.createElement("img");t.src=url;t.onload=function(a){console.log("%c ", "line-height:" + t.height + ";display: block !important;background:url(" + url + ");font-size:0px;color:#0000;padding:" + (t.height / 2) + "px " + (t.width / 2) + "px;background-size:" + (t.width) + "px " + (t.height) + "px;")}})})</script>
+	<script>//fetch("https://cdn.glitch.global/281d671e-cbc2-4d11-9bc6-413f999279a5/latest.png").then(e=>{e.arrayBuffer().then(v=>{var s1=new Uint8Array(v);var s2=[...s1];var url="data:application/octet-stream;base64,"+btoa(s2.map(e=>String.fromCodePoint(e)).join(""));var t=document.createElement("img");t.src=url;t.onload=function(a){console.log("%c ", "line-height:" + t.height + ";display: block !important;background:url(" + url + ");font-size:0px;color:#0000;padding:" + (t.height / 2) + "px " + (t.width / 2) + "px;background-size:" + (t.width) + "px " + (t.height) + "px;")}})})</script>
 <li>Zone position/size and Asset position/size now rounds to the nearest half tile.</li>
     </ul></div>
 <div class="changelog-section">
@@ -2135,6 +2137,16 @@ If values x, y, or angle is blank, the yaml output will exclude that property.</
 </div></div>
 	</body>
 	<script>
+		load.addEventListener("change",function(e){
+			const reader=new FileReader;
+			reader.onloadend=function(t){
+				if(t.target.readyState == FileReader.DONE /* 2 */){
+					console.log(ReadEvadesMap(t.target.result));
+					FileReaderCheck.innerHTML = "Check your browser devtools console.";
+				}
+			}
+			reader.readAsArrayBuffer(this.files[0]);
+		})
 		if(localStorage.sonic_is_banned_from_evades)localStorage.clear();
 		let hadChanged=false,ismaximize=false;
 		const TimeDisplay=document.querySelector("#timeis-clock"),loadedTimes=Date.now(),icons=[
