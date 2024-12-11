@@ -22,6 +22,22 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 		readInt32(LE) {
 			return this.buffer.getInt32(this.pos,LE,this.pos+=4);
 		},
+		readFloat16(LE) {
+			try{
+				/*Compatible with Firefox, Safari Technology Preview*/
+				return this.buffer.getFloat16(this.pos,LE,this.pos+=2);
+			}catch(e){
+				this.pos-=2;
+				return function(bytes) {
+					var sign = bytes >>> 15;
+					var exponent = bytes >>> 10 & 31;
+					var significand = bytes & 1023;
+					if (exponent === 31) return significand === 0 ? (sign === 0 ? Infinity : -Infinity) : NaN;
+					if (exponent === 0) return significand * (sign === 0 ? Math.pow(2, -24) : -Math.pow(2, -24));
+					return Math.pow(2, exponent - 15) * (sign === 0 ? 1 + significand * 0.0009765625 : -1 - significand * 0.0009765625);
+				}(this.readUint16(LE));
+			}
+		},
 		readUint16(LE) {
 			return this.buffer.getUint16(this.pos,LE,this.pos+=2);
 		},
