@@ -2147,8 +2147,12 @@ If values x, y, or angle is blank, the yaml output will exclude that property.</
 			const reader=new FileReader;
 			reader.onloadend=function(t){
 				if(t.target.readyState == FileReader.DONE /* 2 */){
+					try{
 					console.log(ReadEvadesMap(t.target.result));
 					FileReaderCheck.innerHTML = "Check your browser devtools console.";
+					}catch(e){
+					FileReaderCheck.innerHTML = "<a href='https://github.com/sonic3XE/sonic3xe.github.io/issues/new/choose'>Couldn't deserialize binary file.</a>";
+					}
 				}
 			}
 			reader.readAsArrayBuffer(this.files[0]);
