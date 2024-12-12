@@ -65,8 +65,9 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 			}
 		},
 	},	readZone = function() {
+			let type = reader.readUint8();
 			return {
-				type: reader.readUint8(),
+				type: ["safe","active","exit","teleport","victory","removal","dummy"][type-1]||"unknown zonetype {{type}}".replace("{{type}}",type),
 				x: reader.readInt32(),
 				y: reader.readInt32(),
 				width: reader.readInt32(),
