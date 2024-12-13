@@ -56,6 +56,13 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 		readChar() {
 			return String.fromCharCode(this.readUint8());
 		},
+		readChars(x=0) {
+			let str="";
+			while(str.length<x){
+				str+=String.fromCharCode(this.readUint8());
+			};
+			return str;
+		},
 		readString() {
 			let str = "", char = "";
 			while (true) {
@@ -68,32 +75,34 @@ function ReadEvadesMap(buffer/*Must be ArrayBuffer or any TypedArray object*/) {
 			let type = reader.readUint8();
 			return {
 				type: ["safe","active","exit","teleport","victory","removal","dummy"][type-1]||"unknown zonetype {{type}}".replace("{{type}}",type),
-				x: reader.readInt32(),
-				y: reader.readInt32(),
-				width: reader.readInt32(),
-				height: reader.readInt32()
+				x: reader.readInt32(true),
+				y: reader.readInt32(true),
+				width: reader.readInt32(true),
+				height: reader.readInt32(true)
 			};
 	},	readArea = function() {
 		const area = {
-			x: reader.readInt32(),
-			y: reader.readInt32(),
-			zone_count: reader.readUint16(),
+			x: reader.readInt32(true),
+			y: reader.readInt32(true),
+			zone_count: reader.readUint16(true),
 			zones: []
 		};
 		while(area.zones.length<area.zone_count)area.zones.push(readZone());
 		return area;
 	},	readRegion = function() {
-		const region = {
+		let region = {
+			region_name_length: reader.readUint8(),
 			region_name: reader.readString(),
-			area_count: reader.readUint16(),
+			area_count: reader.readUint16(true),
 			areas: []
 		};
 		while(region.areas.length<region.area_count)region.areas.push(readArea());
 		return region;
 	},	readMap = function() {
-		const map = {
+		let map = {
+			spawn_region_length: reader.readUint8(),
 			spawn_region: reader.readString(),
-			region_count: reader.readUint16(),
+			region_count: reader.readUint16(true),
 			regions: []
 		};
 		while(map.regions.length<map.region_count)map.regions.push(readRegion());
