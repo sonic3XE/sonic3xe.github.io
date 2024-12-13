@@ -2151,10 +2151,10 @@ If values x, y, or angle is blank, the yaml output will exclude that property.</
 			reader.onloadend=function(t){
 				if(t.target.readyState == FileReader.DONE /* 2 */){
 					try{
-					console.log(ReadEvadesMap(t.target.result));
-					FileReaderCheck.innerHTML = "Check your browser devtools console.";
+						console.log(ReadEvadesMap(t.target.result));
+						FileReaderCheck.innerHTML = "Check your browser devtools console.";
 					}catch(e){
-					FileReaderCheck.innerHTML = "<a href='https://github.com/sonic3XE/sonic3xe.github.io/issues/new/choose'>Couldn't deserialize binary file.</a>";
+						FileReaderCheck.innerHTML = "<a href='https://github.com/sonic3XE/sonic3xe.github.io/issues/new/choose'>Couldn't deserialize binary file.</a>";
 					}
 				}
 			}
